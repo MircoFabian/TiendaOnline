@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333;
+}
+
+.product-card span {
+    color: #f60;
+    font-weight: bold;
+}
+
+/* Modal */
+.product-detail {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Aseguramos que el modal esté encima de todo */
+}
+
+.detail-content {
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    max-width: 80%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+    z-index: 10000; /* Aseguramos que la X esté encima del contenido */
+}
+
+.info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #f60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e55b00;
+}
+#product-image {
+    max-width: 300px; /* Limita el tamaño máximo de la imagen */
+    max-height: 400px; /* Limita la altura de la imagen */
+    object-fit: contain; /* Ajusta la imagen sin distorsionarla */
+}
